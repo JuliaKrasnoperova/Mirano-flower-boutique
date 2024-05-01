@@ -1,0 +1,91 @@
+@use '../variables' as *;
+
+.filter {}
+
+.filter__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.filter__group {
+    display: flex;
+    border: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+}
+
+.filert__radio {
+    appearance: none;
+    position: absolute;
+}
+
+.filer__label {
+    padding: 16px;
+    padding-left: 60px;
+    border-radius: 300px;
+    background-color: $white;
+    color: $dark;
+    cursor: pointer;
+    background-position: center left 16px;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    transition: 0.2s;
+
+    &_flower {
+        background-image: url('/img/filter/flowers.png');
+    }
+
+    &_toys {
+        background-image: url('/img/filter/toy.png');
+    }
+
+    &_postcard {
+        background-image: url('/img/filter/cover.png');
+    }
+
+    &:hover {
+        background-color: $orange;
+    }
+
+    &__radio:focus-visible+&__label {
+        outline: 2px solid $orange;
+        outline-offset: 5px;
+    }
+
+    &__radio:checked+&__label {
+        background-color: $light-orange;
+    }
+}
+
+.filter__group_choices {}
+
+.filter__choices {
+    gap: 64px;
+}
+
+.filter__select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-image: url('/public/img/filter/arrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.filter__input-price {}
+
+.filter__type-list {}
+
+.filter__type-item {}
+
+.filter__type-button {}

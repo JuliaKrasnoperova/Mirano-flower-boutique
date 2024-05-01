@@ -1,0 +1,73 @@
+@use '../variables' as *;
+
+.header {
+    padding: 32px 0;
+}
+
+.header__container {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.header__form {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+    height: 40px;
+}
+
+.header__input {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    padding: 8px 56px 8px 16px;
+    border: none;
+
+    &::placeholder {
+        color: rgba($color: $dark, $alpha: 0.3);
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}
+
+.header__search-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+    border-radius: 32px;
+    background-color: $light-orange;
+}
+
+.header__logo {
+    justify-self: center;
+}
+
+.header__cart-button {
+    background: url('img/header/cart.svg') no-repeat center;
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    justify-self: end;
+
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+    color: $orange;
+
+}
