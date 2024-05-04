@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './modules/media' as *;
 
 
 :root {
@@ -28,6 +29,10 @@ body {
     line-height: 1.3;
     color: $dark;
     background-color: $bg;
+
+    @include mobile {
+        font-size: 14px;
+    }
 }
 
 
@@ -97,4 +102,12 @@ iframe {
     max-width: 1354px;
     padding: 0 27px;
     margin: 0 auto;
+
+    @include tablet {
+        max-width: 694px;
+    }
+
+    @include mobile {
+        padding: 0 14px;
+    }
 }
