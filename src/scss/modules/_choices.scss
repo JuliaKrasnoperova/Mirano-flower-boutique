@@ -4,4 +4,8 @@
 
 .choices__box {
     display: none;
+
+    &_open {
+        display: block;
+    }
 }
