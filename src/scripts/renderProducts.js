@@ -1,11 +1,11 @@
 import { ProductCard } from "./productCard";
-import { store } from "./store";
+import { productStore } from "./store";
 
 export const renderProducts = async () => {
   const goodsList = document.querySelector(".goods__list");
 
   const updateList = () => {
-    const products = store.getProducts();
+    const products = productStore.getProducts();
     goodsList.innerHTML = "";
 
     if (products.length === 0) {
@@ -22,6 +22,6 @@ export const renderProducts = async () => {
     });
   };
 
-  store.subscribe(updateList);
+  productStore.subscribe(updateList);
   updateList();
 };
