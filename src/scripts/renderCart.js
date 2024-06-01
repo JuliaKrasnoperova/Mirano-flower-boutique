@@ -19,12 +19,7 @@ export const renderCart = () => {
     }
 
     const productCards = cart.map(CartElem);
-    const totalPriceValue = cart.reduce((acc, product) => {
-      return acc + product.price * product.quantity;
-    }, 0);
-
     cartList.append(...productCards);
-    cartPriceTotal.innerHTML = `${totalPriceValue}&nbsp;₽`;
   };
 
   cartStore.subscribe(updateList);
